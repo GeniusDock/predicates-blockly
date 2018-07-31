@@ -3,16 +3,16 @@ var MINUS = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAQAAAD2e2DtA
 var HAND = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfiBAUBKBeKSgeBAAABTElEQVQoz22QzyvDcRjHX5/vvrMyStI2uZgftdVCSpJCyW1y00oUF+Xg4OIkx5VyUyJOsgv/gnJw4YCSSFMyB5pGbLJ99/k8LltreB2f9+v50eOigoc5FvGTJF8pugCwaKaNaE98uf9zMBXwjtNpbvmuaH2B0+HXuuyMEbOlQ4U1M5ZVcYbowg02YfZW5cnE9JIROdI7jsiOacoMPLZdEYPR1ouQkxCRG+feESlIXkQOzLR+NhvCpc3UbPcHAoRsADcAQ0Twq0ZosQgEVY0SqvGpkAUCxkIUYRP4bZRRNi9pvaD+TwXyFseHuYzy/Kt8CWfQ5Ems6C/5y7uZyDEH0Nt8vq0dUx0XzaapPyIIoIi23+47+SrlTvrTjLhKy2wmO95OqiacS+QBH9gAFDlOZnYbrimWOixSZCwUlK+vZd7bXiPldyi0yqX1OtkfCBS/9XAtDKAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDQtMDVUMDQ6NDQ6NDItMDM6MDD+uUN1AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA0LTA1VDA0OjQwOjIzLTAzOjAw5hdZgAAAAABJRU5ErkJggg==";
 
 window.initProcedsBlockly = function(customStatementType) {
-  Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT = 'Describe el procedimiento...';
-  Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "Hacer algo";
-  Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE = "Definir";
+  Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT = 'Describe el predicado...';
+  Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "Nombre del predicado";
+  Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE = "Predicado";
   Blockly.Msg.PROCEDURES_DEFNORETURN_NOPARAMS = "";
   Blockly.Msg.PROCEDURES_DEFRETURN_NOPARAMS = "";
   Blockly.Msg.PROCEDURES_DEFRETURN_COMMENT = 'Describe la función...';
   Blockly.Msg.PROCEDURES_DEFRETURN_PROCEDURE = "devolver algo";
   Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = "Definir";
   Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "con";
-  Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP = "Crea un procedimiento.";
+  Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP = "Crea un predicado.";
   Blockly.Msg.PROCEDURES_DEFRETURN_TOOLTIP = "Crea una función.";
   Blockly.Msg.PROCEDURES_ADD_PARAMETER = "Agregar parámetro";
   Blockly.Msg.PROCEDURES_ADD_PARAMETER_PROMPT = "Ingresa el nombre del parámetro";
@@ -239,6 +239,8 @@ window.initProcedsBlockly = function(customStatementType) {
         Blockly.Msg.PROCEDURES_ADD_PARAMETER,
         function() { addParameter(self); }
       );
+
+      this.setInputsInline(true);
 
       var input = this.appendDummyInput()
           .appendField(title)

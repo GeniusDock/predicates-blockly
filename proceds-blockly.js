@@ -241,6 +241,8 @@ window.initProcedsBlockly = function(customStatementType) {
       );
 
       this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setPreviousStatement(true);
 
       var input = this.appendDummyInput()
           .appendField(title)

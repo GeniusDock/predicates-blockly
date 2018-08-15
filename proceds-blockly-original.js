@@ -328,7 +328,7 @@ Blockly.Blocks['procedures_defnoreturn_nobody'] = {
       }
     }
   },
-  callType_: 'procedures_callnoreturn'
+  callType_: 'procedures_callnoreturn_nobody'
 };
 
 Blockly.Blocks['procedures_defnoreturn'] = {

@@ -202,8 +202,8 @@ window.initProcedsBlockly = function(customStatementType) {
       .appendField(nameField, 'ARG' + i)
       .appendField(createCallButton)
       .appendField(removeParameterButton);
-  
-    self.moveInputBefore(id, 'STACK');
+    if(self.callType_ !== "procedures_callnoreturn_nobody")
+      self.moveInputBefore(id, 'STACK');
   };
 
   var makeProcedureDomToMutation = function() {

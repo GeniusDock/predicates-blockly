@@ -437,6 +437,7 @@ window.initProcedsBlockly = function(customStatementType) {
     Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP,
     Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL
     ),
+    updateShape_: Blockly.Blocks['procedures_callnoreturn'].updateShape_,
     getProcedureCall: Blockly.Blocks['procedures_callnoreturn'].getProcedureCall,
     getProcedureDef: Blockly.Blocks['procedures_defnoreturn'].getProcedureDef,
     setStatements_: Blockly.Blocks['procedures_defnoreturn'].setStatements_,

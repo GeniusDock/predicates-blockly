@@ -425,6 +425,18 @@ window.initProcedsBlockly = function(customStatementType) {
   Blockly.Blocks['procedures_defnoreturn'].updateParams_ = makeUpdateParams();
   Blockly.Blocks['procedures_defnoreturn'].domToMutation = makeProcedureDomToMutation();
 
+  Blockly.Blocks['procedures_defnoreturn_nobody'].init = makeProcedureInit(
+    false, false, true,
+    Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
+    Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE,
+    Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT,
+    Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP,
+    Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL
+  );
+  Blockly.Blocks['procedures_defnoreturn_nobody'].customContextMenu = makeProcedureCustomMenu();
+  Blockly.Blocks['procedures_defnoreturn_nobody'].updateParams_ = makeUpdateParams();
+  Blockly.Blocks['procedures_defnoreturn_nobody'].domToMutation = makeProcedureDomToMutation();
+
   Blockly.Blocks['procedures_defreturn'].init = makeProcedureInit(
     true, true, true,
     Blockly.Msg.PROCEDURES_DEFRETURN_PROCEDURE,

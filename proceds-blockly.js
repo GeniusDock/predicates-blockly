@@ -437,7 +437,7 @@ window.initProcedsBlockly = function(customStatementType) {
     Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP,
     Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL
     ),
-    callType_: 'procedures_callnoreturnnoparams'
+    callType_: 'procedures_defnoreturn_nobody'
   };
   Blockly.Blocks['procedures_defnoreturn_nobody'].customContextMenu = makeProcedureCustomMenu();
   Blockly.Blocks['procedures_defnoreturn_nobody'].updateParams_ = makeUpdateParams();

@@ -4,8 +4,11 @@ var HAND = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAA
 
 window.initProcedsBlockly = function(customStatementType) {
   Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT = 'Describe el predicado...';
+  Blockly.Msg.PROCEDURES_DEFNORETURN_NOBODY_COMMENT = 'Describe el hecho...';
   Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "Nombre del predicado";
+  Blockly.Msg.PROCEDURES_DEFNORETURN_NOBODY_PROCEDURE = "Nombre del hecho";
   Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE = "Predicado";
+  Blockly.Msg.PROCEDURES_DEFNORETURN_NOBODY_TITLE = "Hecho";
   Blockly.Msg.PROCEDURES_DEFNORETURN_NOPARAMS = "";
   Blockly.Msg.PROCEDURES_DEFRETURN_NOPARAMS = "";
   Blockly.Msg.PROCEDURES_DEFRETURN_COMMENT = 'Describe la función...';
@@ -427,9 +430,9 @@ window.initProcedsBlockly = function(customStatementType) {
 
   Blockly.Blocks['procedures_defnoreturn_nobody'].init = makeProcedureInit(
     false, false, true,
-    Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
-    Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE,
-    Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT,
+    Blockly.Msg.PROCEDURES_DEFNORETURN_NOBODY_PROCEDURE,
+    Blockly.Msg.PROCEDURES_DEFNORETURN_NOBODY_TITLE,
+    Blockly.Msg.PROCEDURES_DEFNORETURN_NOBODY_COMMENT,
     Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP,
     Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL
   );

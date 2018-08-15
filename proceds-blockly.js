@@ -437,6 +437,7 @@ window.initProcedsBlockly = function(customStatementType) {
     Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP,
     Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL
     ),
+    setStatements_: Blockly.Blocks['procedures_defnoreturn'].setStatements_,
     callType_: 'procedures_defnoreturn_nobody'
   };
   Blockly.Blocks['procedures_defnoreturn_nobody'].customContextMenu = makeProcedureCustomMenu();

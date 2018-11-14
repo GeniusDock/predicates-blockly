@@ -3,11 +3,11 @@ var MINUS = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAQAAAD2e2DtA
 var HAND = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfiBAUBKBeKSgeBAAABTElEQVQoz22QzyvDcRjHX5/vvrMyStI2uZgftdVCSpJCyW1y00oUF+Xg4OIkx5VyUyJOsgv/gnJw4YCSSFMyB5pGbLJ99/k8LltreB2f9+v50eOigoc5FvGTJF8pugCwaKaNaE98uf9zMBXwjtNpbvmuaH2B0+HXuuyMEbOlQ4U1M5ZVcYbowg02YfZW5cnE9JIROdI7jsiOacoMPLZdEYPR1ouQkxCRG+feESlIXkQOzLR+NhvCpc3UbPcHAoRsADcAQ0Twq0ZosQgEVY0SqvGpkAUCxkIUYRP4bZRRNi9pvaD+TwXyFseHuYzy/Kt8CWfQ5Ems6C/5y7uZyDEH0Nt8vq0dUx0XzaapPyIIoIi23+47+SrlTvrTjLhKy2wmO95OqiacS+QBH9gAFDlOZnYbrimWOixSZCwUlK+vZd7bXiPldyi0yqX1OtkfCBS/9XAtDKAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDQtMDVUMDQ6NDQ6NDItMDM6MDD+uUN1AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA0LTA1VDA0OjQwOjIzLTAzOjAw5hdZgAAAAABJRU5ErkJggg==";
 
 window.initProcedsBlockly = function(customStatementType) {
-  Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT = 'Describe el predicado...';
+  Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT = 'Describe la condición...';
   Blockly.Msg.PROCEDURES_DEFNORETURN_NOBODY_COMMENT = 'Describe el hecho...';
-  Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "Nombre del predicado";
+  Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "Nombre de la condición";
   Blockly.Msg.PROCEDURES_DEFNORETURN_NOBODY_PROCEDURE = "Nombre del hecho";
-  Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE = "Predicado";
+  Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE = "Condición";
   Blockly.Msg.PROCEDURES_DEFNORETURN_NOBODY_TITLE = "Hecho";
   Blockly.Msg.PROCEDURES_DEFNORETURN_NOPARAMS = "";
   Blockly.Msg.PROCEDURES_DEFRETURN_NOPARAMS = "";
@@ -15,7 +15,7 @@ window.initProcedsBlockly = function(customStatementType) {
   Blockly.Msg.PROCEDURES_DEFRETURN_PROCEDURE = "devolver algo";
   Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = "Definir";
   Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "con";
-  Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP = "Crea un predicado.";
+  Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP = "Crea una condición.";
   Blockly.Msg.PROCEDURES_DEFRETURN_TOOLTIP = "Crea una función.";
   Blockly.Msg.PROCEDURES_ADD_PARAMETER = "Agregar parámetro";
   Blockly.Msg.PROCEDURES_ADD_PARAMETER_PROMPT = "Ingresa el nombre del parámetro";
@@ -104,7 +104,7 @@ window.initProcedsBlockly = function(customStatementType) {
     xmlBlock.setAttribute('type', 'variables_get');
 
     var callback = Blockly.ContextMenu.callbackFactory(procedureBlock, xmlBlock);
-    
+
     return function() {
       var block = callback();
       block.$parent = procedureBlock.id;
@@ -175,7 +175,7 @@ window.initProcedsBlockly = function(customStatementType) {
         newName = getAvailableName(self, newName);
 
       self.arguments_[i] = newName;
-      
+
       var blocks = self.workspace.getAllBlocks();
       for (block of blocks) {
         if (block.type === self.callType_ && block.getProcedureCall() === self.getProcedureDef()[0]) {
